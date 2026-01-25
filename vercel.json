@@ -1,0 +1,6 @@
+{
+  "crons": [{
+    "path": "/api/extract-citations",
+    "schedule": "*/30 * * * *"
+  }]
+}
