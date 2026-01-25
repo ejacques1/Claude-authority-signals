@@ -1,0 +1,23 @@
+{
+  "name": "claude-citation-extractor",
+  "version": "1.0.0",
+  "description": "Automated citation extraction from Claude API with Vercel Cron",
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/load-questions.js",
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@supabase/supabase-js": "^2.39.0",
+    "googleapis": "^144.0.0",
+    "xlsx": "^0.18.5",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Dr. Erin Jacques",
+  "license": "MIT"
+}
