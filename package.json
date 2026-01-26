@@ -1,16 +1,18 @@
 {
-  "name": "claude-citation-extractor",
+  "name": "claude-authority-signals",
   "version": "1.0.0",
-  "description": "Automated citation extraction from Claude API with Vercel Cron",
+  "description": "Automated citation extraction and authority signal coding",
   "type": "module",
   "scripts": {
     "setup": "node scripts/load-questions.js",
+    "sync-urls": "node scripts/sync-urls-to-supabase.js",
     "dev": "vercel dev",
     "deploy": "vercel --prod"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
     "@supabase/supabase-js": "^2.39.0",
+    "apify-client": "^2.7.1",
     "googleapis": "^144.0.0",
     "xlsx": "^0.18.5",
     "dotenv": "^16.3.1"
