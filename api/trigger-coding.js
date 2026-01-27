@@ -288,7 +288,7 @@ async function markFailed(urlId, reason) {
 }
 
 export default async function handler(req, res) {
-  console.log('🚀 Authority coding trigger called');
+  console.log('Authority coding trigger called');
   
   try {
     // Claim URL
@@ -328,7 +328,7 @@ export default async function handler(req, res) {
     // Mark complete
     await markComplete(urlRecord.id);
     
-    console.log(`✓ Completed - updated ${rowsUpdated} rows`);
+    console.log(`Completed - updated ${rowsUpdated} rows`);
 
     return res.status(200).json({
       url: urlRecord.source_url,
@@ -338,21 +338,10 @@ export default async function handler(req, res) {
     });
     
   } catch (error) {
-    console.error('❌ Error:', error);
+    console.error('Error:', error);
     return res.status(500).json({
       status: 'error',
       error: error.message
     });
   }
 }
-```
-
----
-
-**Upload this to GitHub:**
-- Path: `api/trigger-coding.js`
-- Vercel will auto-deploy
-
-**Then visit:**
-```
-https://your-vercel-url/api/trigger-coding
